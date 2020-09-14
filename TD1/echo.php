@@ -19,5 +19,43 @@
           // On écrit le contenu de la variable 'texte' dans la page Web
           echo $texte;
         ?>
+        <br><br>
+        <?php
+        $prenom = "marc";
+		echo'<br>';
+		echo "Bonjour " . $prenom;
+		echo '<br>';
+		echo "2:Bonjour $prenom";
+		echo'<br>';
+		echo 'Bonjour $prenom';
+		echo'<br>';
+		echo $prenom;
+		echo "$prenom";
+		?>
+
+		<br><br>
+
+		<?php
+        $marque = "Renault";
+        $couleur = "bleu";
+        $immatriculation = "256AB34";
+
+        $voiture = array(
+        	"marque" => "$marque", 
+        	"couleur" => "$couleur",
+        	"immatriculation" => "$immatriculation"
+        );
+        var_dump($voiture);
+
+
+        echo <<< EOT
+        <p> 
+        Voici la voiture :<br>
+        <ul> <li> marque : $marque </li> 
+        <li> immatriculation : $immatriculation </li> 
+        <li> couleur : $couleur </li></ul>
+        </p>;
+EOT;
+       ?>
     </body>
 </html> 
