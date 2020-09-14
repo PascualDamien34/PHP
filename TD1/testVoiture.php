@@ -7,26 +7,19 @@
    
     <body>
         <?php
-        $marque = "Renault";
-        $couleur = "bleu";
-        $immatriculation = "256AB34";
+        require_once "Voiture.php";
 
-        /*$voiture = array(
-            "marque" => "$marque", 
-            "couleur" => "$couleur",
-            "immatriculation" => "$immatriculation"
-        );*/
-        if (empty($voiture)){
-            echo "cheh";
-        }else{
-        echo <<< EOT
-        <p> 
-        Voici la voiture :<br>
-        <ul> <li> marque : $marque </li> 
-        <li> immatriculation : $immatriculation </li> 
-        <li> couleur : $couleur </li></ul>
-        </p>    
-EOT;
+        $voiture1 = new Voiture("Renault", "bleu", "258BD154");
+        $voiture2 = new Voiture("Vroum", "Chrome","123AZ789");
+        $voiture3 = new Voiture("Ferrari","rouge","147JH852");
+
+        $voitures = array(
+          $voiture1,
+          $voiture2,
+          $voiture3
+        );
+        foreach ($voitures as $value) {
+            $value->afficher();
         }
        ?>
     </body>

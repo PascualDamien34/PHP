@@ -50,7 +50,7 @@ class Voiture {
   public function afficher() {
     echo "<ul>";
     foreach ($this as $key => $value) {
-      echo "<li> $key : $value <li>";
+      echo "<li> $key : $value </li>";
     }
     echo "</ul>";
   }
